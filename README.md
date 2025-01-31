@@ -38,16 +38,6 @@ El **Amigo Secreto** es una aplicación web simple que permite a los usuarios in
 - Se seleccionará un nombre aleatorio de la lista.
 - El resultado se mostrará en pantalla.
 
-## 🔗 Acceso al Proyecto
-Puedes acceder al código fuente aquí: [Repositorio en GitHub](https://github.com/tu-usuario/amigo-secreto)
-
-Para ejecutar el proyecto en tu máquina:
-```bash
-git clone https://github.com/tu-usuario/amigo-secreto.git
-cd amigo-secreto
-```
-Luego, abre `index.html` en tu navegador.
-
 ## 🛠️ Tecnologías Utilizadas
 - **HTML5** → Estructura de la página.
 - **CSS3** → Estilos y diseño.
