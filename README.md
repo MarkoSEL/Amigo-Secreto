@@ -1,129 +1,69 @@
 # 🎁 Amigo Secreto
 
-## 📌 Descripción
+![Portada del Proyecto](assets/amigo-secreto.png)
 
-Este proyecto permite a los usuarios ingresar nombres de amigos, almacenarlos en una lista y sortear aleatoriamente un "amigo secreto". Está desarrollado con **HTML, CSS y JavaScript**.
+## 🏅 Insignias
+![HTML](https://img.shields.io/badge/HTML5-✔️-orange)
+![CSS](https://img.shields.io/badge/CSS3-✔️-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-✔️-yellow)
 
-## 🚀 Características
+## 📖 Índice
+1. [Descripción del Proyecto](#-descripción-del-proyecto)
+2. [Estado del Proyecto](#-estado-del-proyecto)
+3. [Demostración de Funciones y Aplicaciones](#-demostración-de-funciones-y-aplicaciones)
+4. [Acceso al Proyecto](#-acceso-al-proyecto)
+5. [Tecnologías Utilizadas](#-tecnologías-utilizadas)
+6. [Personas Contribuyentes](#-personas-contribuyentes)
+7. [Personas Desarrolladoras del Proyecto](#-personas-desarrolladoras-del-proyecto)
+8. [Licencia](#-licencia)
 
-- Agregar amigos a una lista.
-- Mostrar la lista de amigos ingresados.
-- Sortear aleatoriamente un amigo de la lista.
-- Mostrar el resultado del sorteo en pantalla.
+## 📌 Descripción del Proyecto
+El **Amigo Secreto** es una aplicación web simple que permite a los usuarios ingresar nombres de amigos, almacenarlos en una lista y sortear aleatoriamente un "amigo secreto". Es ideal para organizar eventos y juegos en grupos de manera sencilla.
 
-## 🛠️ Tecnologías Utilizadas
+## 🚀 Estado del Proyecto
+✅ Proyecto **completado** y funcional. 
+📌 Posibles mejoras futuras:
+- Agregar opción para eliminar amigos de la lista.
+- Implementar almacenamiento local.
+- Mejorar el diseño con animaciones CSS.
 
-- **HTML5** → Estructura del sitio.
-- **CSS3** → Estilos y diseño.
-- **JavaScript** → Lógica del sorteo y manipulación del DOM.
-
-## 📂 Estructura del Proyecto
-
-```
-Amigo-Secreto/
-│── assets/                # Imágenes y otros recursos
-│── index.html             # Página principal
-│── style.css              # Estilos del sitio
-│── app.js                 # Lógica del proyecto
-│── README.md              # Documentación
-```
-
-## 📦 Instalación
-
-1. **Clona el repositorio**
-   ```bash
-   git clone https://github.com/tu-usuario/amigo-secreto.git
-   ```
-2. **Abre la carpeta del proyecto**
-   ```bash
-   cd amigo-secreto
-   ```
-3. **Abre el archivo **``** en tu navegador**
-   - Puedes hacer doble clic en el archivo o usar una extensión como "Live Server" en VS Code.
-
-## 📌 Dependencias
-
-Este proyecto no requiere instalación de dependencias externas, ya que utiliza únicamente HTML, CSS y JavaScript nativo.
-
-## ▶️ Cómo Ejecutar el Proyecto
-
-1. **Método 1: Abrir directamente en el navegador**
-   - Haz doble clic en `index.html`.
-2. **Método 2: Usar Live Server en VS Code**
-   - Instala la extensión "Live Server".
-   - Haz clic derecho en `index.html` y selecciona "Open with Live Server".
-
-## 🎯 Funcionalidades
-
+## 🎯 Demostración de Funciones y Aplicaciones
 ### ➕ Agregar un Amigo
-
 - Escribe un nombre en el campo de entrada.
 - Haz clic en el botón "Añadir".
 - El nombre se agregará a la lista de amigos.
 
-### 🔄 Actualizar la Lista
-
-- La lista se actualizará automáticamente cada vez que se agregue un amigo.
-
 ### 🎲 Sortear un Amigo
-
 - Haz clic en el botón "Sortear amigo".
 - Se seleccionará un nombre aleatorio de la lista.
 - El resultado se mostrará en pantalla.
 
-## 📝 Código Principal (`app.js`)
+## 🔗 Acceso al Proyecto
+Puedes acceder al código fuente aquí: [Repositorio en GitHub](https://github.com/tu-usuario/amigo-secreto)
 
-```javascript
-let amigos = [];
-
-function agregarAmigo() {
-    let input = document.getElementById("amigo");
-    let nombre = input.value.trim();
-    if (nombre === "") {
-        alert("Por favor, inserte un nombre.");
-        return;
-    }
-    amigos.push(nombre);
-    actualizarLista();
-    input.value = "";
-}
-
-function actualizarLista() {
-    let lista = document.getElementById("listaAmigos");
-    lista.innerHTML = "";
-    for (let amigo of amigos) {
-        let li = document.createElement("li");
-        li.textContent = amigo;
-        lista.appendChild(li);
-    }
-}
-
-function sortearAmigo() {
-    let resultado = document.getElementById("resultado");
-    if (amigos.length === 0) {
-        alert("No hay amigos en la lista para sortear.");
-        return;
-    }
-    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
-    resultado.innerHTML = `<li>${amigos[indiceAleatorio]} es el amigo secreto 🎉</li>`;
-}
+Para ejecutar el proyecto en tu máquina:
+```bash
+git clone https://github.com/tu-usuario/amigo-secreto.git
+cd amigo-secreto
 ```
+Luego, abre `index.html` en tu navegador.
 
-## ⚠️ Posibles Problemas y Soluciones
+## 🛠️ Tecnologías Utilizadas
+- **HTML5** → Estructura de la página.
+- **CSS3** → Estilos y diseño.
+- **JavaScript** → Lógica del sorteo y manipulación del DOM.
 
-### ❌ No se muestra la lista de amigos después de agregar
+## 🤝 Personas Contribuyentes
+Si deseas contribuir, ¡serás bienvenido! Puedes hacerlo creando un **fork** del repositorio y enviando un **pull request**.
 
-🔹 **Solución:** Asegúrate de que el ID `listaAmigos` esté correctamente referenciado en el HTML y que `actualizarLista()` se esté llamando después de agregar un amigo.
+## 👨‍💻 Personas Desarrolladoras del Proyecto
+- **Marko Encalada** - Desarrollo y documentación
 
-### ❌ No se puede sortear si no hay amigos en la lista
+## 📄 Licencia
+Este proyecto está bajo la licencia **MIT**.
 
-🔹 **Solución:** Asegúrate de agregar amigos antes de intentar sortear.
+¡Gracias por visitar el proyecto y que disfrutes tu amigo secreto! 🎉
 
-### ❌ No se actualiza la página después de modificar `app.js`
-
-🔹 **Solución:** Intenta recargar la página (`Ctrl + R`) o borrar la caché con `Ctrl + Shift + R`.
-
-## 📌 Mejoras Futuras
 
 - Agregar la opción de eliminar amigos de la lista.
 - Implementar almacenamiento local para guardar la lista.
